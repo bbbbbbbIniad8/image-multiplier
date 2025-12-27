@@ -8,7 +8,7 @@ export default function Home() {
   const [dataUrl, setDataUrl] = useState<string>("");
   const [created, setCreated] = useState<boolean>(false);
   const [pasteNum, setPasteNum] = useState<number>(100)
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [uploadImage, setImage] = useState<HTMLImageElement | undefined>(undefined)
 
@@ -17,7 +17,7 @@ export default function Home() {
     height: number
   }
   const [resultSize, setSize] = useState<imageSize>({ width: 4000, height: 3200 })
-  const [uploadSize, setUploadSize] = useState<imageSize>({width: 0, height: 0 })
+
 
   function loadImage(src: string): Promise<HTMLImageElement>{
     return new Promise((resolve, reject) => {
@@ -43,7 +43,6 @@ export default function Home() {
     const url = URL.createObjectURL(file);
     setUrl(url);
     const image = await loadImage(url);
-    setUploadSize({width:image.width, height:image.height})
     setImage(image)
   }
 
