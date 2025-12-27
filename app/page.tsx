@@ -118,7 +118,7 @@ export default function Home() {
             画像を選択
             <input className="hidden" type="file" onChange={handleFileSelect} ></input>
           </label>
-          <div className="text-1xl">ここに画像をドロップしてもOK</div>
+          <div className="text-1xl text-center">ここに画像をドロップしてもOK</div>
         </div>
 
         <div className="m-5 p-3 flex flex-col bg-emerald-400 rounded-lg items-center justify-center text-center">
